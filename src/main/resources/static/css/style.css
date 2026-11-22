@@ -1,0 +1,296 @@
+:root {
+  --orange: #ffa65a;        /* warna utama (header, dropdown, tombol) */
+  --orange-dark: #f28c38;   /* saat hover */
+  --red: #ff4545;           /* tombol hapus */
+  --red-dark: #e53030;
+  --black: #000;
+  --white: #fff;
+  --border: 1px solid #000; /* garis tipis hitam di semua input */
+  --radius: 8px;            /* sudut membulat */
+  --page-padding: 27px;     /* jarak konten dari tepi layar */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;   /* padding & border dihitung di dalam width */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  background: var(--white);
+  min-height: 100vh;
+  min-height: 100dvh;       /* tinggi layar yang benar di HP (address bar) */
+  display: flex;
+  flex-direction: column;   /* header di atas, main mengisi sisa layar */
+}
+
+.topbar {
+  background: var(--orange);
+  display: flex;
+  align-items: center;      /* tombol & judul sejajar vertikal */
+  gap: 16px;
+  padding: 10px var(--page-padding);
+  min-height: 74px;
+}
+
+.btn-back {
+  flex-shrink: 0;           /* lingkaran tidak boleh mengecil */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;       /* membuat lingkaran */
+  background: var(--white);
+  display: grid;
+  place-items: center;      /* ikon tepat di tengah */
+}
+
+.btn-back svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--black);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.topbar-title {
+  color: var(--white);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 2.6rem);
+  line-height: 1.2;
+}
+
+.page {
+  flex: 1;                  /* mengisi sisa tinggi layar */
+  display: flex;
+  padding: 20px var(--page-padding) 16px;
+}
+
+.recipe-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;        /* di monitor lebar konten tidak terlalu melebar */
+  margin: 0 auto;
+}
+
+/* Dua kolom: kiri (judul, kategori, deskripsi) & kanan (instruksi) */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 32px;
+  align-items: start;
+}
+
+.form-col--left {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 320px;         /* kolom kiri sempit seperti di desain */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;                /* jarak label ke input */
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  font: inherit;            /* input tidak otomatis memakai font body */
+  font-size: 1rem;          /* >= 16px agar iPhone tidak auto-zoom */
+  font-weight: 500;
+  padding: 10px 12px;
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+input[type="text"] {
+  height: 50px;
+}
+
+textarea {
+  resize: vertical;         /* user hanya boleh menarik ke bawah */
+  min-height: 82px;
+}
+
+.textarea-instruksi {
+  min-height: 320px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid rgba(255, 166, 90, 0.5);
+  outline-offset: 1px;
+  border-color: var(--orange-dark);
+}
+
+/* Dropdown "Pilih kategori" */
+.select-kategori {
+  appearance: none;         /* hilangkan tampilan bawaan browser */
+  -webkit-appearance: none;
+  width: 170px;
+  height: 46px;
+  padding: 0 40px 0 20px;
+  border: none;
+  border-radius: var(--radius);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+  background: var(--orange)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 10'%3E%3Cpath d='M0 0h12L6 10z' fill='white'/%3E%3C/svg%3E")
+    no-repeat right 12px center / 13px;
+}
+
+.select-kategori option {
+  color: var(--black);      /* teks di daftar pilihan tetap terbaca */
+  background: var(--white);
+}
+/
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;          /* tag pindah ke baris baru bila penuh */
+  gap: 16px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  padding: 0 10px 0 22px;
+  border: var(--border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.tag-remove {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tag-remove:hover {
+  background: #eee;
+}
+
+.form-actions {
+  margin-top: auto;         /* dorong tombol ke bagian bawah halaman */
+  padding-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.btn {
+  height: 47px;
+  border: none;
+  border-radius: var(--radius);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background: var(--orange);
+  width: 170px;
+}
+
+.btn-primary:hover {
+  background: var(--orange-dark);
+}
+
+.btn-danger {
+  background: var(--red);
+  width: 64px;
+  display: grid;
+  place-items: center;
+}
+
+.btn-danger:hover {
+  background: var(--red-dark);
+}
+
+.btn-danger svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--white);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-padding: 16px;
+  }
+
+  .topbar {
+    min-height: 60px;
+    gap: 12px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;  /* kolom kanan turun ke bawah */
+    row-gap: 22px;
+  }
+
+  .form-col--left {
+    max-width: none;              /* input selebar layar */
+  }
+
+  .textarea-instruksi {
+    min-height: 220px;
+  }
+
+  /* Tombol tetap terlihat di bawah layar saat menggulir */
+  .form-actions {
+    position: sticky;
+    bottom: 0;
+    background: var(--white);
+    padding: 12px 0;
+    margin-top: 24px;
+  }
+
+  .btn-primary {
+    flex: 1;                      /* tombol Simpan/Tambah melebar */
+    width: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .select-kategori {
+    width: 100%;
+  }
+
+  .tag-list {
+    gap: 10px;
+  }
+
+  .tag {
+    height: 44px;                 /* 44px = ukuran minimum nyaman disentuh */
+    padding-left: 16px;
+  }
+}
