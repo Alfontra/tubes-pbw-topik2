@@ -1,0 +1,211 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+}
+/*untuk dashboard*/
+.navBar{
+    background-color: #FFA658;
+    display: flex;
+    padding: 10px 32px;
+    justify-content: space-between;
+    color: #ffffff;
+    align-items: center;
+}
+
+
+.AksiNavD{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.searchBar{
+    background-color: #ffffff;
+    display: flex;
+    width: 350px;
+    height: 35px;
+    border-radius: 10px;
+    color: black;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.searchBar input{
+    border:none;
+    font-size: 15px;
+    outline: none;
+}
+
+#pageAddRecipe{
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+    font-weight:500;
+    cursor:pointer;
+}
+/*buat layout recipe & card recipe*/
+
+.IsiDashboard{
+    max-width: 1100px;
+    padding: 30px;
+}
+
+.layoutRecipe{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.cardRecipe{
+    position: relative;
+    background-color: #e2e2e2;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+.detailRecipe{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+
+}
+
+.gambarResep{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.divJudul{
+    padding: 14px;
+    min-height: 75px;
+    display: flex;
+    align-items:flex-start;
+}
+
+.judulResep{
+    font-size: 15px;
+    font-weight: 600;
+}
+.tombolEdit{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #FFA658;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.tombolEdit img{
+    width: 16px;
+    height: 16px;
+}
+
+
+
+/*navbar untuk edit tambah Recipe */
+.navBarV2{
+    background-color: #FFA658;
+    display: flex;
+    padding: 10px 32px;
+    color: #ffffff;
+    align-items: center;
+    gap : 20px;
+}
+
+.back{
+    display:flex;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    align-items:center;
+    background-color:#ffffff;
+    border:none;
+    cursor:pointer;
+    justify-content:center;
+    padding:0px;
+}
+
+#backIcon{
+    width:15px;
+    height:15px;
+}
+
+/* layout isi konten resep*/
+
+#ContainerIsi{
+    display:flex;
+    gap:40px;
+    padding:30px;
+    max-width: 1100px;
+    align-items: flex-start;
+}
+
+.keteranganIsi{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    width: 200px;
+}
+
+.instruksiResep{
+    display:flex;
+    flex-direction:column;
+
+}
+
+#gambarDetailResep{
+    width: 100%;
+    height:250px;
+    object-fit: cover;
+    display: block;
+}
+
+#judul-Resep{
+    font-size:28px ;
+    font-weight: 700;
+}
+
+.containerKategori{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.kategoriResep{
+    background: #FFA658;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    border-radius: 3px ;
+    padding: 4px;
+}
+
+.tahapanRecipe{
+    white-space: pre-line;
+}
+
+
+
+
+
+/*tambah & edit recipe */
+

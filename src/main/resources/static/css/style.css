@@ -160,7 +160,7 @@ select:focus {
   color: var(--black);      /* teks di daftar pilihan tetap terbaca */
   background: var(--white);
 }
-/
+
 .tag-list {
   list-style: none;
   display: flex;
