@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet"  href="../static/css/User.css" th:href="@{/css/User.css}">
+</head>
+<body>
+    <navbar class="navBar">
+        <h1 class="judul">Recipe Sharing</h1>
+        <div class="AksiNavD">
+            <div class="searchBar">
+                <img src="../static/images/Vector.png" th:src="@{/images/Vector.png}" alt="search" id="searchIcon">
+                <input type="text" placeholder="cari resep masakan" id="searchInput">   
+            </div>
+            <button id="pageAddRecipe" th:onclick="|location.href='@{/tambahRecipePage}'|"  >Tambah Recipe</button>
+        </div>
+    </navbar>
+
+    <main class="IsiDashboard">
+        <div class="layoutRecipe" id="LayoutRecipe">
+            <div class="cardRecipe" th:each="recipe : ${recipes}">
+
+                <a class="tombolEdit" th:if="${recipe.myRecipe}" th:href="@{/editRecipe(id=${recipe.id})}">
+                    <img src="../static/images/clarity_edit-solid.png" th:src="@{/images/clarity_edit-solid.png}" alt="editIcon">
+
+                </a>
+
+                <a class="detailRecipe" th:href="@{/isiResep(id=${recipe.id})}">
+                    <img class="gambarResep" th:src="${recipe.imageUrl}" th:alt="${recipe.judul}">
+                    <div class="divJudul">
+                        <h3 class="judulResep" th:text="${recipe.judul}">Judul Resep</h3>
+                    </div>
+                </a>
+
+
+            </div>
+        </div>
+    </main>
+
+    <script src="../static/js/index.js" th:src="@{/js/dashboardUser.js}" defer></script>
+</body>
+</html>
