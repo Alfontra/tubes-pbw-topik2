@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet"  href="../static/css/LogSig.css" th:href="@{/css/LogSig.css}">
+</head>
+<body>
+    <form class="containerLogSig" th:action="@{/LoginAdmin}" method="post">
+        <div class="judulLogSig">
+            <h2>Login Admin</h2>
+        </div>  
+
+        <div class="containerRole">
+            <button type="button" class="buttonRole" th:onclick="|location.href='@{/LoginAdmin}'|">Admin</button>
+            <button type="button" class="buttonRole" th:onclick="|location.href='@{/LoginUser}'|">User</button>
+        </div>
+
+        <div class="containerInputLogSig">
+            <div class="containerEmail">
+                <p>Email</p>
+                <input type="email" placeholder="masukan Email" id="emailInput" class="inputLogSig" name="email">
+            </div>
+
+            <div class="containerPassword">
+                <p>Password</p>
+                <input type="password" placeholder="masukan Password" id="passwordInput" class="inputLogSig" name="password">
+            </div>
+        </div>
+
+        <div class="containerBtnLogSig">
+            <button type="submit" class="buttonLogSig">Login</button>
+        </div>
+    </form>
+</body>
+</html>

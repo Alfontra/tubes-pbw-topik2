@@ -18,19 +18,19 @@
 
     <main id="ContainerIsi">
         <div class="keteranganIsi">
-            <img id="gambarDetailResep" th:src="${recipe.imageUrl}" th:alt="${recipe.judul}">
+            <img id="gambarDetailResep" th:src="${recipe.photo_path}" th:alt="${recipe.title}">
 
-            <h2 id="judul-Resep" class="judulRecipe" th:text="${recipe.judul}">Judul Recipe</h2>
+            <h2 id="judul-Resep" class="judulRecipe" th:text="${recipe.title}">Judul Recipe</h2>
 
             <div id="container-Kategori" class="containerKategori">
-                <span class="kategoriResep" th:each="kat: ${recipe.kategori}" th:text="${kat}"></span>
+                <span class="kategoriResep" th:each="kat: ${recipe_categories.category_id}" th:text="${kat}"></span>
             </div>
 
-            <p id="recipe-description" class="deskripsiRecipe" th:text="${recipe.deskripsi}">deskripsi recipe </p>
+            <p id="recipe-description" class="deskripsiRecipe" th:text="${recipe.description}">deskripsi recipe </p>
         </div>
         <div class="instruksiResep">
             <h2>Intruksi</h2>
-            <p id="recipe-instruction" class="tahapanRecipe" th:text="${recipe.instruksi}">tahapan resep</p>
+            <p id="recipe-instruction" class="tahapanRecipe" th:text="${recipe.instructions}">tahapan resep</p>
         </div>
     </main>
 
