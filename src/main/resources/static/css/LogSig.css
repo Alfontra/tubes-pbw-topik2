@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background-color: #FFA658;
+    display: flex;
+     justify-content: center;
+   align-items: center;
+   height: 100vh;
+
+}
+
+.containerLogSig{
+    background-color: #ffffff;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    padding:50px 30px 20px 30px;
+    display:flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+
+}
+
+.judulLogSig{
+  margin-bottom: 40px;
+}
+
+.judulLogSig h2{
+  font-size: 40px;
+}
+
+.containerRole{
+  display: flex;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.buttonRole{
+  font-weight: 600;
+  width: 150px;
+  height: 50px;
+   background-color: #FFA658;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  cursor:pointer;
+}
+
+
+.containerInputLogSig{
+   margin-bottom: 20px;
+}
+
+.containerEmail{
+  margin-bottom: 10px;
+}
+
+.containerEmail p{
+  margin-bottom: 5px;
+}
+
+.inputLogSig{
+  width: 350px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 3px;
+  border-color:  solid #565656;
+}
+
+.containerNama{
+  margin-bottom: 10px;
+}
+
+.containerNama p{
+  margin-bottom: 5px;
+}
+.containerPassword{
+   margin-bottom: 15px;
+}
+
+.containerPassword p{
+   margin-bottom: 5px;
+}
+
+.containerBtnLogSig{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonLogSig{
+  width: 250px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background-color: #FFA658;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.containerBtnLogSig a{
+  font-size: 13px;
+}
+
+
+
+
+
+
+
