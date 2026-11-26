@@ -1,0 +1,37 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+/*untuk dashboard*/
+.navBar{
+    background-color: #FFA658;
+    display: flex;
+    padding: 10px 32px;
+    justify-content: space-between;
+    color: #ffffff;
+    align-items: center;
+}
+
+.AksiNavD{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+#pagePengguna, #pageKategori{
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+    font-weight:500;
+    cursor:pointer;
+}
