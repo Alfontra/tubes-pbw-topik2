@@ -12,13 +12,20 @@
     <body>
         <navbar class="navBar">
             <h1 class="judul">Daftar Pengguna</h1>
+
             <div class="AksiNavD">
-                <button id="pageDashboard" url="../templates/dashboardAdmin.html" th:onclick="|location.href='@{/dashboardAdmin.html}'|"  >Home</button>
-                <button id="pageKategori" url="../templates/daftarKategori.html" th:onclick="|location.href='@{/daftarKategori.html}'|"  >Kategori</button>
+                <div class="searchBar">
+                    <img src="../static/images/Vector.png" th:src="@{/images/Vector.png}" alt="search" id="searchIcon">
+                    <input type="text" placeholder="cari nama pengguna" id="searchInput">   
+                </div>
+
+                <!-- pake href buat interaksi tanpa bootRun -->
+                <button id="pageDashboard" onclick="location.href='dashboardAdmin.html'" th:onclick="|location.href='@{/dashboardAdmin.html}'|"  >Home</button>
+                <button id="pageKategori" onclick="location.href='daftarKategori.html'" th:onclick="|location.href='@{/daftarKategori.html}'|"  >Kategori</button>
             </div>
         </navbar>
         
-        <div class="grafik">
+        <div>
             
         </div>
 
