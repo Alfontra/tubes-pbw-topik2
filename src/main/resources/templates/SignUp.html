@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet"  href="../static/css/LogSig.css" th:href="@{/css/LogSig.css}">
+    <title>Document</title>
+</head>
+<body>
+    <form class="containerLogSig" th:action="@{/SignUp}" method="post">
+        <div class="judulLogSig">
+            <h2>Sign Up</h2>
+        </div>
+
+        <div class="containerInputLogSig">
+
+            <div class="containerNama">
+                <p>Nama</p>
+                <input type="text" placeholder="masukan nama" id="namaInput" class="inputLogSig" name="nama">
+            </div>
+
+            <div class="containerEmail">
+                <p>Email</p>
+                <input type="email" placeholder="masukan Email" id="emailInput" class="inputLogSig" name="email">
+            </div>
+
+            <div class="containerPassword">
+                <p>Password</p>
+                <input type="password" placeholder="masukan Password" id="passwordInput" class="inputLogSig" name="password" >
+            </div>
+        </div>
+
+        <div class="containerBtnLogSig">
+            <button type="submit" class="buttonLogSig">Sign Up</button>
+            <a th:href="@{/LoginUser}">Sudah punya akun?</a>
+        </div>
+    </form>
+</body>
+</html>

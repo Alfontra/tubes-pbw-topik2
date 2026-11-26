@@ -29,9 +29,9 @@
                 </a>
 
                 <a class="detailRecipe" th:href="@{/isiResep(id=${recipe.id})}">
-                    <img class="gambarResep" th:src="${recipe.imageUrl}" th:alt="${recipe.judul}">
+                    <img class="gambarResep" th:src="${recipe.photo_path}" th:alt="${recipe.title}">
                     <div class="divJudul">
-                        <h3 class="judulResep" th:text="${recipe.judul}">Judul Resep</h3>
+                        <h3 class="judulResep" th:text="${recipe.title}">Judul Resep</h3>
                     </div>
                 </a>
 
