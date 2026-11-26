@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daftar Kategori</title>
+
+        <!-- pake href buat interaksi tanpa bootRun -->
+        <link rel="stylesheet" href="../static/css/daftarKategori.css" th:href="@{/css/daftarKategori.css}">
+    </head>
+
+    <body>
+        <navbar class="navBar">
+            <h1 class="judul">Daftar Kategori</h1>
+
+            <div class="AksiNavD">
+                <div class="searchBar">
+                    <img src="../static/images/Vector.png" th:src="@{/images/Vector.png}" alt="search" id="searchIcon">
+                    <input type="text" placeholder="cari kategori" id="searchInput">   
+                </div>
+
+                <!-- pake href buat interaksi tanpa bootRun -->
+                <button id="pageDashboard" onclick="location.href='dashboardAdmin.html'" th:onclick="|location.href='@{/dashboardAdmin.html}'|"  >Home</button>
+                <button id="pagePengguna" onclick="location.href='daftarPengguna.html'" th:onclick="|location.href='@{/daftarPengguna.html}'|"  >Pengguna</button>
+            </div>
+        </navbar>
+        
+        
+
+    </body>
+</html>
