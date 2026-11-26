@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daftar Pengguna</title>
+
+        <!-- pake href buat interaksi tanpa bootRun -->
+        <link rel="stylesheet" href="../static/css/daftarPengguna.css" th:href="@{/css/daftarPengguna.css}">
+    </head>
+
+    <body>
+        <navbar class="navBar">
+            <h1 class="judul">Daftar Pengguna</h1>
+            <div class="AksiNavD">
+                <button id="pageDashboard" url="../templates/dashboardAdmin.html" th:onclick="|location.href='@{/dashboardAdmin.html}'|"  >Home</button>
+                <button id="pageKategori" url="../templates/daftarKategori.html" th:onclick="|location.href='@{/daftarKategori.html}'|"  >Kategori</button>
+            </div>
+        </navbar>
+        
+        <div class="grafik">
+            
+        </div>
+
+    </body>
+</html>
