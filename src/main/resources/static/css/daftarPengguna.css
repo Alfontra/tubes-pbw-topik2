@@ -10,6 +10,12 @@ body{
     background-color: #ffffff;
 }
 
+h3{
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
 /*untuk dashboard*/
 .navBar{
     background-color: #FFA658;
@@ -53,4 +59,25 @@ body{
     padding: 5px;
     font-weight:500;
     cursor:pointer;
+}
+
+/* untuk content */
+.content{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-container{
+    border-radius: 10px;
+    background-color: #E2DFD2;
+    width: 100%;
+}
+
+.columns{
+    display: flex;
+    flex-direction: row;
+        
+    padding: 10px 25px;
 }
